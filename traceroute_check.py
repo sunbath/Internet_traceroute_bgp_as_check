@@ -77,7 +77,7 @@ def check_ip_info(traceroute_hops):
                 hop_info_list.append([hop_count, IP_Address, Country, ASN])
                 hop_count += 1
         else:
-            hop_info_list.append([hop_count, hop_ip, "N/A", "N/A"])
+            hop_info_list.append([hop_count, hop_ip, "N/A", "N/A (Non-Public IP)"])
             hop_count += 1
     return hop_info_list
 
