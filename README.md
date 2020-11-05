@@ -12,6 +12,7 @@ Private IPs and Unreachables will be checked and identified in the script.
 
 
 #### Output 
+```
 +-----+----------------+-----------+---------------------------------------------------------+  
 | Hop | IP Address     |  Country  | AS Number - Telco Info                                  |  
 +-----+----------------+-----------+---------------------------------------------------------+  
@@ -29,4 +30,5 @@ Private IPs and Unreachables will be checked and identified in the script.
 |  12 | 202.84.249.14  | Hong Kong | AS4637 Telstra Global                                   |  
 |  13 | 42.99.163.9    |   Japan   | AS4637 Telstra Global                                   |  
 |  14 | 10.249.92.230  |    N/A    | N/A (Non-Public IP)                                     |  
-+-----+----------------+-----------+---------------------------------------------------------+  
++-----+----------------+-----------+---------------------------------------------------------+ 
+```
