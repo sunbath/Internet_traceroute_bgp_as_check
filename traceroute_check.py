@@ -2,8 +2,7 @@ import requests
 from requests.exceptions import HTTPError
 from prettytable import PrettyTable
 from ipaddress import IPv4Address
-import re
-
+from re import compile, findall
 # Variables
 
 # Specify the traceroute file
@@ -24,8 +23,7 @@ base_url = "http://ip-api.com/json/{}?fields=status,country,region,regionName,ci
 def read_juniper_traceroute_file(file):
     textfile = open(file, 'r')
     matches = []
-    reg = re.compile(
-        r"\d{1,2}\s\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}[^0-9]|\d{1,2}\s\*\s\*\s\*")
+    reg = compile(r"\d{1,2}\s\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}[^0-9]|\d{1,2}\s\*\s\*\s\*")
     for line in textfile:
         matches += reg.findall(line)
     textfile.close()
