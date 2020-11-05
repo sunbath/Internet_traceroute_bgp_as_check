@@ -5,12 +5,22 @@ from ipaddress import IPv4Address
 import re
 
 # Variables
-traceroute_hops = read_juniper_traceroute_file("juniper_traceroute.txt")
+
+# Specify the traceroute file
+traceroute_file = "juniper_traceroute.txt"
+
+# Base URL to get IP info
+# Here I use ip-api.com to gather the necessary ip information for each hop ip
+# String output from ip-api.com from this API call:
+# {"status": "success", "country": "India", "region": "TN", "regionName": "Tamil Nadu", "city": "Chennai", "isp": "Tata Communications Limited","org": "VSNL", "as": "AS4755 TATA Communications formerly VSNL is Leading ISP", "query": "121.244.40.162"}
+# The output is a string with JSON format, it needs to further transform to JSON.
 base_url = "http://ip-api.com/json/{}?fields=status,country,region,regionName,city,isp,org,as,query"
 
 # Functions
 
 # Read Juniper Traceroute File and return a list of hop ips
+
+
 def read_juniper_traceroute_file(file):
     textfile = open(file, 'r')
     matches = []
@@ -27,6 +37,8 @@ def read_juniper_traceroute_file(file):
     return traceroute_hops
 
 # Check if each hop ip is private or *
+
+
 def check_invalid_ip(ip):
     # Check if IPv4 address is private
     if ip == "*":
@@ -37,6 +49,8 @@ def check_invalid_ip(ip):
         return True
 
 # check each hop ip info
+
+
 def check_ip_info(traceroute_hops):
 
     hop_count = 1
@@ -72,10 +86,13 @@ def check_ip_info(traceroute_hops):
     return hop_info_list
 
 # Print Result
+
+
 def print_result(hop_info_list):
     # Output Display Configuration
     PTable = PrettyTable()
-    PTable.field_names = ["Hop", "IP Address","Country", "AS Number - Telco Info"]
+    PTable.field_names = ["Hop", "IP Address",
+                          "Country", "AS Number - Telco Info"]
     PTable.align["Hop"] = 'm'
     PTable.align["IP Address"] = 'l'
     PTable.align["Country"] = 'm'
@@ -86,10 +103,11 @@ def print_result(hop_info_list):
     print(PTable)
 
 
-
 def main():
+    traceroute_hops = read_juniper_traceroute_file(traceroute_file)
     hop_info_list = check_ip_info(traceroute_hops)
     print_result(hop_info_list)
+
 
 if __name__ == "__main__":
     main()
