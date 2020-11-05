@@ -1,4 +1,6 @@
-# This is a quick tool to identify BGP AS Number of a traceroute result gathering from Juniper or Cisco Network Devices
+# BGP AS Check for Internet Traceroute
+
+## This is a quick tool to identify BGP AS Number of a traceroute result gathering from Juniper or Cisco Network Devices
 
 This tools helps to identify if BGP routing path is correct for a given traffic path
 
