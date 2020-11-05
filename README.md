@@ -12,21 +12,21 @@ Private IPs and Unreachables will be checked and identified in the script.
 
 
 #### Output 
-+-----+----------------+-----------+---------------------------------------------------------+
-| Hop | IP Address     |  Country  | AS Number - Telco Info                                  |
-+-----+----------------+-----------+---------------------------------------------------------+
-|  1  | *              |    N/A    | N/A (Non-Public IP)                                     |
-|  2  | 121.244.40.162 |   India   | AS4755 TATA Communications formerly VSNL is Leading ISP |
-|  3  | 172.17.169.202 |    N/A    | N/A (Non-Public IP)                                     |
-|  4  | 180.87.36.9    |   India   | AS6453 TATA COMMUNICATIONS (AMERICA) INC                |
-|  5  | 180.87.36.83   |   India   | AS6453 TATA COMMUNICATIONS (AMERICA) INC                |
-|  6  | 180.87.12.2    | Singapore | AS6453 TATA COMMUNICATIONS (AMERICA) INC                |
-|  7  | 116.0.93.168   | Hong Kong | AS6453 TATA COMMUNICATIONS (AMERICA) INC                |
-|  8  | 116.0.93.145   | Hong Kong | AS6453 TATA COMMUNICATIONS (AMERICA) INC                |
-|  9  | 134.159.128.5  | Hong Kong | AS4637 Telstra Global                                   |
-|  10 | 134.159.145.61 | Hong Kong | AS4637 Telstra Global                                   |
-|  11 | 202.84.157.38  | Hong Kong | AS4637 Telstra Global                                   |
-|  12 | 202.84.249.14  | Hong Kong | AS4637 Telstra Global                                   |
-|  13 | 42.99.163.9    |   Japan   | AS4637 Telstra Global                                   |
-|  14 | 10.249.92.230  |    N/A    | N/A (Non-Public IP)                                     |
-+-----+----------------+-----------+---------------------------------------------------------+
++-----+----------------+-----------+---------------------------------------------------------+  
+| Hop | IP Address     |  Country  | AS Number - Telco Info                                  |  
++-----+----------------+-----------+---------------------------------------------------------+  
+|  1  | *              |    N/A    | N/A (Non-Public IP)                                     |  
+|  2  | 121.244.40.162 |   India   | AS4755 TATA Communications formerly VSNL is Leading ISP |  
+|  3  | 172.17.169.202 |    N/A    | N/A (Non-Public IP)                                     |  
+|  4  | 180.87.36.9    |   India   | AS6453 TATA COMMUNICATIONS (AMERICA) INC                |  
+|  5  | 180.87.36.83   |   India   | AS6453 TATA COMMUNICATIONS (AMERICA) INC                |  
+|  6  | 180.87.12.2    | Singapore | AS6453 TATA COMMUNICATIONS (AMERICA) INC                |  
+|  7  | 116.0.93.168   | Hong Kong | AS6453 TATA COMMUNICATIONS (AMERICA) INC                |  
+|  8  | 116.0.93.145   | Hong Kong | AS6453 TATA COMMUNICATIONS (AMERICA) INC                |  
+|  9  | 134.159.128.5  | Hong Kong | AS4637 Telstra Global                                   |  
+|  10 | 134.159.145.61 | Hong Kong | AS4637 Telstra Global                                   |  
+|  11 | 202.84.157.38  | Hong Kong | AS4637 Telstra Global                                   |  
+|  12 | 202.84.249.14  | Hong Kong | AS4637 Telstra Global                                   |  
+|  13 | 42.99.163.9    |   Japan   | AS4637 Telstra Global                                   |  
+|  14 | 10.249.92.230  |    N/A    | N/A (Non-Public IP)                                     |  
++-----+----------------+-----------+---------------------------------------------------------+  
