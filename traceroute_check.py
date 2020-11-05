@@ -70,17 +70,13 @@ def check_ip_info(traceroute_hops):
                 print(
                     'Other error occurred: {err} on hop #{}'.format(hop_count))
             else:
-                # print('Success!')
                 result = response.json()
-                # print(result)
                 IP_Address = result['query']
                 Country = result['country']
                 ASN = result['as']
                 hop_info_list.append([hop_count, IP_Address, Country, ASN])
-                #PTable.add_row([hop_count, IP_Address, Country, ASN])
                 hop_count += 1
         else:
-            #PTable.add_row([hop_count, hop_ip, "N/A", "N/A"])
             hop_info_list.append([hop_count, hop_ip, "N/A", "N/A"])
             hop_count += 1
     return hop_info_list
