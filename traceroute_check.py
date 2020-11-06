@@ -1,8 +1,9 @@
-import requests
-from requests.exceptions import HTTPError
-from prettytable import PrettyTable
 from ipaddress import IPv4Address
 from re import compile, findall
+
+import requests
+from prettytable import PrettyTable
+from requests.exceptions import HTTPError
 
 # Variables
 
