@@ -39,7 +39,7 @@ def read_juniper_traceroute_file(file):
 # Check if each hop ip is private or *
 
 
-def check_invalid_ip(ip):
+def check_valid_ip(ip):
     # Check if IPv4 address is private
     if ip == "*":
         return False
@@ -56,7 +56,7 @@ def check_ip_info(traceroute_hops):
     hop_count = 1
     hop_info_list = []
     for hop_ip in traceroute_hops:
-        if check_invalid_ip(hop_ip):
+        if check_valid_ip(hop_ip):
             try:
                 url = base_url.format(hop_ip)
                 response = requests.get(url)
