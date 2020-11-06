@@ -23,19 +23,18 @@ base_url = "http://ip-api.com/json/{}?fields=status,country,region,regionName,ci
 
 
 def read_juniper_traceroute_file(file):
-    textfile = open(file, 'r')
-    matches = []
+
     reg = compile(
         r"\d{1,2}\s\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}[^0-9]|\d{1,2}\s\*\s\*\s\*")
-    for line in textfile:
-        matches += reg.findall(line)
-    textfile.close()
-    traceroute_hops = []
 
-    for hop in matches:
-        traceroute_hops.append(hop.split(' ')[1])
+    # find matching pattern for hop and IPs
+    matches = [reg.findall(line) for line in open(file)]
 
-    return traceroute_hops
+    # Filter out empty entries ([]) and unpack each hop (match) as a string (match[0])
+    matches = [match[0] for match in matches if match != []]
+
+    return [hop.split(' ')[1] for hop in matches]
+
 
 # Check if each hop ip is private or *
 
