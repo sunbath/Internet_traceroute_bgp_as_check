@@ -8,7 +8,7 @@ from requests.exceptions import HTTPError
 # Variables
 
 # Specify the traceroute file
-traceroute_file = "juniper_traceroute.txt"
+traceroute_file = "traceroute.txt"
 
 # Base URL to get IP info
 # Here I use ip-api.com to gather the necessary ip information for each hop ip

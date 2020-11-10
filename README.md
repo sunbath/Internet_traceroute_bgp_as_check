@@ -43,7 +43,7 @@ pip install -r requirements.txt
 5. Update the traceroute filename in the traceroute_check.py file
 
 ```
-traceroute_file = "juniper_traceroute.txt"
+traceroute_file = "traceroute.txt"
 ```
 
 6. Run the code
