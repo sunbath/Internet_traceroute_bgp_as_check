@@ -19,10 +19,10 @@ base_url = "http://ip-api.com/json/{}?fields=status,country,region,regionName,ci
 
 # Functions
 
-# Read Juniper Traceroute File and return a list of hop ips
+# Read Traceroute File and return a list of hop ips
 
 
-def read_juniper_traceroute_file(file):
+def read_traceroute_file(file):
 
     reg = compile(
         r"\d{1,2}\s\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}[^0-9]|\d{1,2}\s\*\s\*\s\*")
@@ -101,7 +101,7 @@ def print_result(hop_info_list):
 
 
 def main():
-    traceroute_hops = read_juniper_traceroute_file(traceroute_file)
+    traceroute_hops = read_traceroute_file(traceroute_file)
     hop_info_list = check_ip_info(traceroute_hops)
     print_result(hop_info_list)
 
