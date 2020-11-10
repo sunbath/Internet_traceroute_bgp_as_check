@@ -40,17 +40,13 @@ pip install -r requirements.txt
 
 4. Paste your traceroute result to a text file and copy the filename for #5.
 
-5. Update the traceroute filename in the traceroute_check.py file
+5. Run the code
 
 ```
-traceroute_file = "traceroute.txt"
+python Internet_Traceroute_Check_AS.py --f <traceroute_filename>
 ```
 
-6. Run the code
-
-```
-python Internet_Traceroute_Check_AS.py
-```
+Or if you don't 
 
 #### Output 
 ```
