@@ -46,8 +46,6 @@ pip install -r requirements.txt
 python Internet_Traceroute_Check_AS.py --f <traceroute_filename>
 ```
 
-Or if you don't 
-
 #### Output 
 ```
 +-----+----------------+-----------+---------------------------------------------------------+  
