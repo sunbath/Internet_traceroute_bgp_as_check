@@ -10,6 +10,47 @@ The traceroute result can be paste in a text file and the script can parse the h
 
 Private IPs and Unreachables will be checked and identified in the script.
 
+#### Installation
+
+1. Clone the Source Code
+
+```
+git clone https://github.com/sunbath/Internet_traceroute_bgp_as_check.git
+```
+
+Then you should see the cloned folder "Internet_Traceroute_Check_AS"
+
+```
+ls -al | grep "Internet_Traceroute_Check_AS"
+```
+
+2. Create a virtual environment in your local environment and activate the virtual environment
+
+```
+cd Internet_Traceroute_Check_AS
+python3 -m venv venv
+source Internet_Traceroute_Check_AS/bin/activate
+```
+
+3. Install the necessary packages
+
+```
+pip install -r requirements.txt
+```
+
+4. Paste your traceroute result to a text file and copy the filename for #5.
+
+5. Update the traceroute filename in the traceroute_check.py file
+
+```
+traceroute_file = "juniper_traceroute.txt"
+```
+
+6. Run the code
+
+```
+python Internet_Traceroute_Check_AS.py
+```
 
 #### Output 
 ```
