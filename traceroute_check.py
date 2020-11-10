@@ -2,6 +2,7 @@ from ipaddress import IPv4Address
 from re import compile, findall
 
 import requests
+import click
 from prettytable import PrettyTable
 from requests.exceptions import HTTPError
 
@@ -100,8 +101,10 @@ def print_result(hop_info_list):
     print(PTable)
 
 
-def main():
-    traceroute_hops = read_traceroute_file(traceroute_file)
+@click.command()
+@click.option('--f', default="traceroute.txt", help="Traceroute result file")
+def main(f):
+    traceroute_hops = read_traceroute_file(f)
     hop_info_list = check_ip_info(traceroute_hops)
     print_result(hop_info_list)
 
