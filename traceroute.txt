@@ -1,4 +1,4 @@
-mumbai1-jisp3> traceroute 69.191.207.30 source 14.141.27.210
+internet_router> traceroute 69.191.207.30
 traceroute to 69.191.207.30 (69.191.207.30) from 14.141.27.210, 30 hops max, 40 byte packets
 1 * * *
 2 121.244.40.162 (121.244.40.162) 2.388 ms 37.771 ms 2.727 ms
