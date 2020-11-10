@@ -1,5 +1,3 @@
-[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/sunbath/Internet_traceroute_bgp_as_check)
-
 # BGP AS Check for Internet Traceroute
 
 #### Description
