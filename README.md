@@ -43,7 +43,24 @@ pip install -r requirements.txt
 5. Run the code
 
 ```
-python Internet_Traceroute_Check_AS.py --f <traceroute_filename>
+python traceroute_check.py --f <traceroute_filename>
+```
+
+or the default filename is "traceroute.txt" and the script can be run with:
+
+```
+python traceroute_check.py
+```
+
+6. Command line Help:
+
+```
+% python3 traceroute_check.py --help
+Usage: traceroute_check.py [OPTIONS]
+
+Options:
+  --f TEXT  Traceroute result file
+  --help    Show this message and exit.
 ```
 
 #### Output 
