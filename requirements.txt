@@ -1,4 +1,4 @@
 click==7.1.2
 ipaddress==1.0.23
 prettytable==1.0.1
-requests==2.24.0
+requests==2.31.0
